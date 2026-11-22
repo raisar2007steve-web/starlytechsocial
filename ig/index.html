@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<link rel="canonical" href="https://starly.lives-in-the-cloud/">
+<title>Starly Industries — Opening</title>
+
+<!-- ============================================================
+     INSTAGRAM BIO LINK LANDING PAGE
+     Purpose: gives the arrival its own path (/ig/) so Cloudflare
+     Web Analytics can count Instagram traffic as a distinct page,
+     because the beacon does not log query strings / UTM tags and
+     Instagram's in-app browser strips the Referer header.
+
+     TO ACTIVATE TRACKING: paste your beacon token below, then
+     delete the surrounding comment markers. Until then this page
+     still redirects correctly, it just is not counted separately.
+     ============================================================ -->
+<!--
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "YOUR_TOKEN"}'></script>
+-->
+
+<style>
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;display:grid;place-items:center;
+    background:radial-gradient(120% 100% at 50% 0%,#0b1020 0%,#07080f 60%,#05060a 100%);
+    color:#f4efe4;
+    font-family:'Space Grotesk','Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+    text-align:center;padding:24px;
+  }
+  .mark{
+    font-family:'IBM Plex Mono',ui-monospace,SFMono-Regular,Consolas,monospace;
+    font-size:11px;letter-spacing:.34em;text-transform:uppercase;
+    color:rgba(233,200,132,.72);margin:0 0 18px;
+  }
+  h1{
+    font-size:clamp(20px,5vw,26px);font-weight:600;letter-spacing:-.01em;
+    margin:0 0 10px;
+  }
+  p{font-size:13px;line-height:1.7;color:rgba(244,239,228,.55);margin:0 0 22px}
+  a{
+    display:inline-block;padding:11px 22px;border-radius:999px;
+    border:1px solid rgba(233,200,132,.34);
+    color:#e9c884;text-decoration:none;
+    font-family:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+    font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  }
+  a:focus-visible{outline:2px solid #5f8bff;outline-offset:3px}
+  .bar{
+    width:150px;height:2px;margin:0 auto 20px;background:rgba(233,200,132,.16);
+    overflow:hidden;border-radius:2px;
+  }
+  .bar::after{
+    content:'';display:block;height:100%;width:40%;
+    background:#e9c884;animation:run .9s ease-in-out infinite;
+  }
+  @keyframes run{0%{transform:translateX(-110%)}100%{transform:translateX(260%)}}
+  @media (prefers-reduced-motion:reduce){.bar::after{animation:none;width:100%}}
+</style>
+</head>
+<body>
+  <main>
+    <div class="bar" aria-hidden="true"></div>
+    <p class="mark">Starly Industries</p>
+    <h1>Opening the card…</h1>
+    <p>Taking you to the full rotating card.</p>
+    <a href="/">Open now</a>
+  </main>
+
+  <noscript><meta http-equiv="refresh" content="0; url=/"></noscript>
+
+  <!-- The delay lets the analytics beacon send its pageview for /ig/
+       before navigation; an instant redirect counts nothing. -->
+  <script>
+    setTimeout(function () {
+      if (location.pathname.replace(/\/+$/, '') === '/ig') {
+        location.replace('/');
+      }
+    }, 400);
+  </script>
+</body>
+</html>
